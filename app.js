@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
 const ejs = require('ejs');
+const path = require("path");
 
 const template_path = path.join(__dirname, "./views");
 app.set("views", template_path);
