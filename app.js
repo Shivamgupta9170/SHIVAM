@@ -70,8 +70,8 @@ app.get('/', function (req, res) {
     .then((foundItems) => {
       res.render("list",{kindOfDay : day , newListItems : foundItems});
     })*/
-  res.render("list");
-  // res.send('Hello World')
+  // res.render("list");
+  res.send('Hello World')
 })
 
 app.get("/:customListName", function(req,res){
