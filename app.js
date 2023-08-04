@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const ejs = require('ejs');
 const path = require("path");
 
-const template_path = path.join(__dirname, "./views");
+const template_path = path.join(__dirname, "/var/task/views");
 app.set("views", template_path);
 app.set("view engine","ejs")
 app.use(express.static("public"));
