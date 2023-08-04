@@ -3,7 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const ejs = require('ejs');
 
-
+const template_path = path.join(__dirname, "./views");
+app.set("views", template_path);
 app.set("view engine","ejs")
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
@@ -70,8 +71,8 @@ app.get('/', function (req, res) {
     .then((foundItems) => {
       res.render("list",{kindOfDay : day , newListItems : foundItems});
     })*/
-  // res.render("list");
-  res.send('Hello World')
+   res.render("list");
+  //res.send('Hello World')
 })
 
 app.get("/:customListName", function(req,res){
