@@ -68,12 +68,12 @@ app.get('/', function (req, res) {
   // var today = new Date()
   // var day = today.toLocaleTimeString('en-us', options);
 
- /* Item.find({})
+Item.find({})
     .then((foundItems) => {
       res.render("list",{kindOfDay : day , newListItems : foundItems});
-    })*/
-   res.render("list");
-  //res.send('Hello World')
+    })
+  //  res.render("list");
+  // res.send('Hello World')
 })
 
 app.get("/:customListName", function(req,res){
